@@ -26,11 +26,21 @@ SkyBalance는 항공 승무원을 위한 **비행 일정 관리**, **도착 도�
 
 ## 사용 기술
 
-- Android Studio (Kotlin)
-- CalendarView, EditText, AlertDialog
-- Google Fused Location API
-- Geocoder (현재 위치 → 도시 이름 변환)
-- SharedPreferences 또는 내부 저장소를 활용한 일기 저장 기능
+
+### 1. CalendarView (달력)
+- 사용자가 원하는 날짜를 선택할 수 있습니다.  
+- 선택한 날짜에 해당하는 일기를 작성하거나 확인할 수 있습니다.
+
+### 2. EditText (일기 작성)
+- 선택한 날짜에 대한 일기를 자유롭게 작성할 수 있습니다.
+
+### 3. Fused Location API + 지오코더(Geocoder)
+- 앱 실행 시 현재 위치(GPS)를 자동으로 감지합니다.  
+- 지오코더(Geocoder)를 통해 위치를 도시 이름으로 변환하여 표시합니다.
+
+### 4. 쉐어드 프리퍼런스(Shared Preference) 또는 내부 저장소
+- 작성한 일기는 자동으로 저장됩니다.  
+- 날짜와 도시명을 키로 하여 저장되며, 다시 해당 날짜를 선택하면 불러올 수 있습니다.
 
 ---
 
