@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_app_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SkyBalance"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_flight_schedule"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_app_title">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="flight schedule"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <CalendarView
+            android:id="@+id/calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btn_add_flight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add your schedule"
+                android:drawableStart="@android:drawable/ic_input_add"
+                android:drawablePadding="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:backgroundTint="#4CAF50"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:elevation="2dp"
+                app:cornerRadius="8dp"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btn_write_diary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add your diary"
+                android:drawableStart="@android:drawable/ic_menu_edit"
+                android:drawablePadding="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:backgroundTint="#8A2BE2"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:elevation="2dp"
+                app:cornerRadius="8dp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_selected_date_flights"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="선택된 날짜의 비행 일정: 없음"
+            android:textSize="18sp"
+            android:textColor="#555555" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_destination_guide"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_flight_schedule">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flight destination information"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_current_location_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Current Location: (Loading location information...)"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_destination_guide_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="도착 도시별 정보 (맛집, 교통, 숙박, 현지 팁 등)가 여기에 표시됩니다."
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#F0F8FF"
+    tools:context=".AddFlightActivity">
+
+    <TextView
+        android:id="@+id/tv_add_flight_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="새 비행 일정 추가"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#2C3E50"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_flight_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="항공편명 (예: KE123)"
+        android:inputType="textCapCharacters"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_add_flight_title" />
+
+    <EditText
+        android:id="@+id/et_departure_airport"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="출발 공항 코드 (예: ICN)"
+        android:inputType="textCapCharacters"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_flight_number" />
+
+    <EditText
+        android:id="@+id/et_arrival_airport"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="도착 공항 코드 (예: LAX)"
+        android:inputType="textCapCharacters"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_departure_airport" />
+
+    <Button
+        android:id="@+id/btn_save_flight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비행 일정 저장"
+        android:drawableStart="@android:drawable/ic_menu_save"
+        android:drawablePadding="8dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:backgroundTint="#2196F3"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_arrival_airport"
+        app:cornerRadius="10dp"
+        android:elevation="4dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
