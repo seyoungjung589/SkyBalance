@@ -49,17 +49,5 @@ SkyBalance는 항공 승무원을 위한 **비행 일정 관리**, **도착 도�
 ![일기 기능 화면](https://github.com/seyoungjung589/SkyBalance/blob/main/diary.png)
 
 
----
-
-## 설치 방법
-
-1. Android Studio에서 프로젝트 열기
-2. 위치 권한 설정 허용
-3. 에뮬레이터나 실제 기기에서 실행
-
-
-
-
-
 
 
